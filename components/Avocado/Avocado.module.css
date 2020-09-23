@@ -1,0 +1,106 @@
+.card {
+  display: grid;
+  margin: 0 1.5rem;
+  grid-column: 1fr;
+}
+
+.card__image {
+  width: 100%;
+  padding: 2.5rem
+}
+
+.card__title {
+  font-size: 2rem;
+}
+
+.card__price {
+  font-size: 1.6rem;
+  padding-top: 1rem;
+}
+
+.card__sku {
+  display: flex;
+  background: var(--secundary-color);
+  font-size: 1.2rem;
+  padding: .5rem .8rem;
+  margin-top: .2rem;
+  justify-self: start;
+  border-radius: .5rem;
+}
+
+.card__form {
+  margin-top: .6rem;
+}
+
+.card__form__input {
+  border: 1px solid var(--secundary-color);
+  height: 4rem;
+  padding: 1rem;
+  width: 60%;
+  font-size: 1.8rem;
+}
+
+.card__form__input::placeholder {
+  font-size: 1.8rem;
+}
+
+.card__form__button {
+  margin-top: .6rem;
+  height: 4.1rem;
+  width: 40%;
+  background: var(--button-color);
+  color:white;
+  border: none
+}
+
+.card__details {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+  font-size: 1.65rem;
+  border-bottom: .1rem solid var(--secundary-color);
+}
+
+.card__details__description{
+  margin-bottom: 1.5rem;
+}
+
+.card__details__attributes{
+  display: grid;
+  border: .1rem solid var(--secundary-color);
+  font-size: 1.7rem;
+  margin-top: 2rem;
+}
+
+.card__details__attributes__title{
+  padding: 1rem;
+  border-bottom: .1rem solid var(--secundary-color);
+  font-size: 1.9rem;
+}
+.card__details__attributes__shape{
+  padding: 1rem 1rem 0 1rem;
+  font-weight: bold;
+
+}
+.card__details__attributes__shape__value{
+  padding: 1rem;
+  border-bottom: .1rem solid var(--secundary-color);
+
+}
+.card__details__attributes__hardiness{
+  padding: 1rem 1rem 0 1rem;
+  font-weight: bold;
+}
+.card__details__attributes__hardiness__value{
+  padding: 1rem;
+  border-bottom: .1rem solid var(--secundary-color);
+}
+
+.card__details__attributes__taste{
+  padding: 1rem 1rem 0 1rem;
+  font-weight: bold;
+}
+.card__details__attributes__taste__value{
+  padding: 1rem;
+}
+

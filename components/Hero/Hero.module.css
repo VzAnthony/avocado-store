@@ -1,0 +1,24 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  height: 150px;
+}
+
+.hero__title {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  align-content: center;
+  margin-top: 3rem;
+}
+.hero__title__image {
+  width: 50px;
+}
+.hero__anchor {
+  font-size: 1.6rem;
+  justify-self: end;
+  text-decoration: none;
+}

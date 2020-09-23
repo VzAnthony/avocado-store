@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 4rem 1.5rem;
+  margin-top: 5rem;
+  border-top: .1rem solid var(--secundary-color);
+}
+
+.footer__item {
+  text-align: center;
+  width: 100%;
+  max-width: 24rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__item__title {
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.footer__item__anchor {
+  font-size: 1.5rem;
+  text-decoration: none;
+}

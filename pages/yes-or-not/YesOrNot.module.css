@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+}
+
+.container__yes_no {
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.container__button {
+  background: #21ba45;
+  color: white;
+  border: none;
+  width: 10rem;
+  height: 3rem;
+  border-radius: .5rem;
+}
+
+.container__anchor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  border: .1rem solid black;
+  border-radius: .5rem;
+}
+
+.change_color_green {
+  animation: change-color-green 1s forwards;
+  
+}
+
+.change_color_red {
+  animation: change-color-red 1s forwards;
+}
+
+@keyframes change-color-green {
+  from {
+  color: var(--secundary-color);
+  }
+  to {
+  color: #21ba45;
+  }
+}
+
+@keyframes change-color-red {
+  from {
+  color: var(--secundary-color);
+  }
+  to {
+  color: red;
+  }
+}
+
