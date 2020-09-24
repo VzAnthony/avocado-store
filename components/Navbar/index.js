@@ -11,7 +11,6 @@ import {
 
 const Navbar = () => {
   const { pathname } = useRouter();
-  console.log(pathname);
   return (
     <nav className={navbar}>
       <menu className={menu}>

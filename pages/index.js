@@ -1,14 +1,26 @@
-import React from 'react'
-import Hero from '@components/Hero'
-import ListAvocados from '@components/ListAvocados'
+import React from "react";
+import Hero from "@components/Hero";
+import ListAvocados from "@components/ListAvocados";
 
-const Home = () => {
+export const getStaticProps = async () => {
+  const response = await fetch(
+    "https://avocado-store-hg1yjakdf.vercel.app/api/avo"
+  );
+  const avocados = await response.json();
+  return {
+    props: {
+      avocados,
+    },
+  };
+};
+
+const Home = ({ avocados }) => {
   return (
     <>
       <Hero />
-      <ListAvocados />
+      <ListAvocados listAvocados={avocados} />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

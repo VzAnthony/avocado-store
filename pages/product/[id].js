@@ -1,30 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Avocado from '@components/Avocado'
+import React from "react";
+import Avocado from "@components/Avocado";
 
-const ProductItem = () => {
-  // const { query : { id } } = useRouter()
-  // const [avo, setAvo] = useState(null)
-  // useEffect(() => {
-  //   if(id) {
-  //     fetch(`/api/avo/${id}`)
-  //     .then(data => data.json())
-  //     .then(response => setAvo(response))
-  //   }
-  // }, [id])
+export const getStaticPaths = async () => {
+  const response = await fetch(
+    "https://avocado-store-hg1yjakdf.vercel.app/api/avo"
+  );
+  const { data: avocados } = await response.json();
+  const paths = avocados.map(({ id }) => ({
+    params: {
+      id,
+    },
+  }));
+  return {
+    paths,
+    // Incremental Static Generation
+    // 404 for everything else.
+    fallback: false,
+  };
+};
 
+export const getStaticProps = async ({ params: { id } }) => {
+  const response = await fetch(
+    `https://avocado-store-hg1yjakdf.vercel.app/api/avo/${id}`
+  );
+  const avo = await response.json();
+  return {
+    props: {
+      avo,
+    },
+  };
+};
+
+const ProductItem = ({ avo }) => {
   return (
     <div>
-      <Avocado />
-      {/* {avo && 
-        <>
-          <h1>{avo.name}</h1>
-          <h3>{avo.id}</h3>
-          <p>{avo.attributes.description}</p>
-        </>
-      } */}
+      <Avocado avo={avo} />
     </div>
-  )
-}
+  );
+};
 
-export default ProductItem
+export default ProductItem;
