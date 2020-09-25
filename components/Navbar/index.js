@@ -19,7 +19,7 @@ const Navbar = () => {
             <picture>
               <img className={anchor__image} src="svg/avocado.svg" alt="SVG" />
             </picture>
-            Avo Store
+            <b>Avo Store</b>
           </a>
         </Link>
         <Link href="/about">
@@ -27,7 +27,7 @@ const Navbar = () => {
             <picture>
               <img className={anchor__image} src="svg/basket.svg" alt="SVG" />
             </picture>
-            Basket
+            <b>Basket</b>
           </a>
         </Link>
       </menu>

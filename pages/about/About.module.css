@@ -14,13 +14,18 @@
 
 .section__source {
   text-align: center;
-  color: var(--secundary-color);
+  color: gray;
   font-size: 1.5rem;
-  margin: .6rem 0
+  margin: 0.6rem 0;
 }
 
 .section__source a {
   text-decoration: none;
+  color: blue;
+}
+
+.section__source a:hover {
+  text-decoration: underline;
 }
 
 .section__list {
@@ -51,4 +56,12 @@
   padding-left: 3.5rem;
   margin-bottom: 2rem;
   font-size: 1.6rem;
+}
+
+@media (min-width: 700px) {
+  .section {
+    max-width: 70rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
 }

@@ -6,8 +6,12 @@
 
 .card__image {
   width: 100%;
-  padding: 2.5rem
+  padding: 2.5rem;
 }
+
+/* .card__buy {
+  background-color: crimson;
+} */
 
 .card__title {
   font-size: 2rem;
@@ -22,14 +26,14 @@
   display: flex;
   background: var(--secundary-color);
   font-size: 1.2rem;
-  padding: .5rem .8rem;
-  margin-top: .2rem;
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.2rem;
   justify-self: start;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .card__form {
-  margin-top: .6rem;
+  margin-top: 0.6rem;
 }
 
 .card__form__input {
@@ -45,12 +49,19 @@
 }
 
 .card__form__button {
-  margin-top: .6rem;
-  height: 4.1rem;
+  position: relative;
+  top: -0.15rem;
+  margin-top: 0.6rem;
+  height: 3.95rem;
   width: 40%;
   background: var(--button-color);
-  color:white;
-  border: none
+  color: white;
+  border: none;
+}
+
+.card__form__button:hover {
+  background: green;
+  cursor: pointer;
 }
 
 .card__details {
@@ -58,49 +69,113 @@
   grid-gap: 2rem;
   margin-top: 2rem;
   font-size: 1.65rem;
-  border-bottom: .1rem solid var(--secundary-color);
+  border-bottom: 0.1rem solid var(--secundary-color);
 }
 
-.card__details__description{
+.card__details__description {
   margin-bottom: 1.5rem;
 }
 
-.card__details__attributes{
+.card__attributes {
   display: grid;
-  border: .1rem solid var(--secundary-color);
+  border: 0.1rem solid var(--secundary-color);
   font-size: 1.7rem;
   margin-top: 2rem;
 }
 
-.card__details__attributes__title{
+.card__attributes__title {
   padding: 1rem;
-  border-bottom: .1rem solid var(--secundary-color);
+  border-bottom: 0.1rem solid var(--secundary-color);
   font-size: 1.9rem;
+  background-color: var(--secundary-color);
 }
-.card__details__attributes__shape{
-  padding: 1rem 1rem 0 1rem;
-  font-weight: bold;
-
-}
-.card__details__attributes__shape__value{
-  padding: 1rem;
-  border-bottom: .1rem solid var(--secundary-color);
-
-}
-.card__details__attributes__hardiness{
+.card__attributes__shape {
   padding: 1rem 1rem 0 1rem;
   font-weight: bold;
 }
-.card__details__attributes__hardiness__value{
+.card__attributes__shape__value {
   padding: 1rem;
-  border-bottom: .1rem solid var(--secundary-color);
+  border-bottom: 0.1rem solid var(--secundary-color);
 }
-
-.card__details__attributes__taste{
+.card__attributes__hardiness {
   padding: 1rem 1rem 0 1rem;
   font-weight: bold;
 }
-.card__details__attributes__taste__value{
+.card__attributes__hardiness__value {
+  padding: 1rem;
+  border-bottom: 0.1rem solid var(--secundary-color);
+}
+
+.card__attributes__taste {
+  padding: 1rem 1rem 0 1rem;
+  font-weight: bold;
+}
+.card__attributes__taste__value {
   padding: 1rem;
 }
 
+@media (min-width: 700px) {
+  .card {
+    grid-template-areas:
+      "a b"
+      "c c"
+      "d d";
+  }
+
+  .picture {
+    grid-area: a;
+  }
+
+  .card__buy {
+    grid-area: b;
+    align-self: center;
+  }
+
+  .card__details {
+    grid-area: c;
+  }
+
+  .card__attributes {
+    grid-area: d;
+  }
+
+  .card__sku {
+    display: inline-block;
+  }
+
+  .card__attributes {
+    grid-template-areas:
+      "attributes attributes"
+      "shape shape_value"
+      "hardiness hardiness_value"
+      "taste taste_value";
+  }
+
+  .card__attributes__title {
+    grid-area: attributes;
+  }
+
+  .card__attributes__shape {
+    grid-area: shape;
+    border-bottom: 0.1rem solid var(--secundary-color);
+    border-right: 0.1rem solid var(--secundary-color);
+  }
+  .card__attributes__shape__value {
+    grid-area: shape_value;
+  }
+  .card__attributes__hardiness {
+    grid-area: hardiness;
+    border-bottom: 0.1rem solid var(--secundary-color);
+    border-right: 0.1rem solid var(--secundary-color);
+  }
+  .card__attributes__hardiness__value {
+    grid-area: hardiness_value;
+  }
+  .card__attributes__taste {
+    grid-area: taste;
+    border-right: 0.1rem solid var(--secundary-color);
+  }
+  .card__attributes__taste__value {
+    grid-area: taste_value;
+  }
+}

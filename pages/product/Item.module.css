@@ -1,0 +1,6 @@
+@media (min-width: 700px) {
+  .item {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+}

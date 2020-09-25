@@ -1,5 +1,6 @@
 import React from "react";
 import Avocado from "@components/Avocado";
+import { item } from "./Item.module.css";
 
 export const getStaticPaths = async () => {
   const response = await fetch(
@@ -33,9 +34,9 @@ export const getStaticProps = async ({ params: { id } }) => {
 
 const ProductItem = ({ avo }) => {
   return (
-    <div>
+    <section className={item}>
       <Avocado avo={avo} />
-    </div>
+    </section>
   );
 };
 

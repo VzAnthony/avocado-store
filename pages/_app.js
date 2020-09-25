@@ -1,15 +1,20 @@
 // import App from 'next/app'
-import Layout from '../components/Layout'
-import style from './style.css'
+import Layout from "../components/Layout";
+import style from "./style.css";
+
+// export const reportWebVitals = (metric) => {
+//   console.log(metric);
+// };
+
 function MyApp({ Component, pageProps }) {
   // Providers - Context/Providers, Theme, data
   // Layout
-  // Props Adicionales 
+  // Props Adicionales
   return (
     <Layout>
       <Component {...pageProps} />
     </Layout>
-  )
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -24,4 +29,4 @@ function MyApp({ Component, pageProps }) {
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default MyApp;

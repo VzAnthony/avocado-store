@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  main,
   list_avocados,
   anchor,
   card__picture,
@@ -13,27 +14,29 @@ import Link from "next/link";
 
 const ListAvocados = ({ listAvocados }) => {
   return (
-    <ul className={list_avocados}>
-      {listAvocados.data.map((item, index) => (
-        <li className={card} key={index}>
-          <Link href={`/product/${item.id}`}>
-            <a className={anchor}>
-              <picture className={card__picture}>
-                <img
-                  className={card__picture__img}
-                  src={item.image}
-                  alt={item.name}
-                />
-              </picture>
-              <div className={card__details}>
-                <h3 className={card__details__title}>{item.name}</h3>
-                <p className={card__details__price}>Price: ${item.price}</p>
-              </div>
-            </a>
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <main className={main}>
+      <ul className={list_avocados}>
+        {listAvocados.data.map((item, index) => (
+          <li className={card} key={index}>
+            <Link href={`/product/${item.id}`}>
+              <a className={anchor}>
+                <picture className={card__picture}>
+                  <img
+                    className={card__picture__img}
+                    src={item.image}
+                    alt={item.name}
+                  />
+                </picture>
+                <div className={card__details}>
+                  <h3 className={card__details__title}>{item.name}</h3>
+                  <p className={card__details__price}>Price: ${item.price}</p>
+                </div>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 };
 
