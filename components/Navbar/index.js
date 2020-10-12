@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useBasket } from "@components/basketContext";
 import {
   navbar,
   menu,
@@ -10,6 +11,8 @@ import {
 } from "./Navbar.module.css";
 
 const Navbar = () => {
+  const car = useBasket();
+  console.log(car);
   const { pathname } = useRouter();
   return (
     <nav className={navbar}>
@@ -22,12 +25,12 @@ const Navbar = () => {
             <b>Avo Store</b>
           </a>
         </Link>
-        <Link href="/about">
-          <a className={`${anchor} ${pathname === "/about" ? active : ""}`}>
+        <Link href="/basket">
+          <a className={`${anchor} ${pathname === "/basket" ? active : ""}`}>
             <picture>
               <img className={anchor__image} src="svg/basket.svg" alt="SVG" />
             </picture>
-            <b>Basket</b>
+            <b>{`Basket (${car.basket.length})`}</b>
           </a>
         </Link>
       </menu>

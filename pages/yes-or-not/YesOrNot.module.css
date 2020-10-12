@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-around;
   height: 200px;
+  margin: 10vh 0 40vh 0;
 }
 
 .container__yes_no {
@@ -17,7 +18,15 @@
   border: none;
   width: 10rem;
   height: 3rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+}
+
+.container__button:hover {
+  background: green;
+}
+
+.container__button:active {
+  transform: scale(0.95);
 }
 
 .container__anchor {
@@ -29,13 +38,16 @@
   text-decoration: none;
   color: black;
   font-size: 1.2rem;
-  border: .1rem solid black;
-  border-radius: .5rem;
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+}
+
+.container__anchor:hover {
+  background-color: var(--secundary-color);
 }
 
 .change_color_green {
   animation: change-color-green 1s forwards;
-  
 }
 
 .change_color_red {
@@ -44,19 +56,18 @@
 
 @keyframes change-color-green {
   from {
-  color: var(--secundary-color);
+    color: var(--secundary-color);
   }
   to {
-  color: #21ba45;
+    color: #21ba45;
   }
 }
 
 @keyframes change-color-red {
   from {
-  color: var(--secundary-color);
+    color: var(--secundary-color);
   }
   to {
-  color: red;
+    color: red;
   }
 }
-

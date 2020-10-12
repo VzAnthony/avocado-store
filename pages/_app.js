@@ -1,6 +1,7 @@
 // import App from 'next/app'
 import Layout from "../components/Layout";
 import style from "./style.css";
+import { BasketContext } from "@components/basketContext";
 
 // export const reportWebVitals = (metric) => {
 //   console.log(metric);
@@ -11,9 +12,11 @@ function MyApp({ Component, pageProps }) {
   // Layout
   // Props Adicionales
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <BasketContext>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </BasketContext>
   );
 }
 
